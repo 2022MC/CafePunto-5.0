@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="image-removebg-preview.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <title>LOGIN GET FREE WI-FI DEMO</title>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+      <div class="logo">
+          <a href="index.html">CAFEPUNTO</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="about.html">เกี่ยวกับเรา</a></li>
+          <li><a href="#contact">ติดต่อเรา</a></li>
+      </ul>
+  </nav>
+
+  <img src="Asset 1.png" alt="FREE WI-FI" />
+
+  <div class="head-text">
+    <h1>CAFEPUNTO FREE WI-FI DEMO</h1>
+  </div>
+
+  <!-- บล็อกสำหรับใส่รหัสผ่านและตั้งค่าโปรไฟล์ -->
+  <div class="login-form">
+    <form id="profileForm">
+
+      <div class="profile-pic-container">
+        <img id="display-profile-pic" src="path-to-your-image.jpg" alt="Profile Picture" />
+        <input type="file" id="profile-pic-input" accept="image/*" onchange="loadProfilePic(event)" style="display: none;" />
+        <label for="profile-pic-input" class="edit-icon">
+          <i class="fa fa-pencil"></i> <!-- ต้องใช้ไอคอนจาก FontAwesome -->
+        </label>
+      </div>
+      
+
+      <label for="username">ตั้งค่า Username</label>
+      <input type="text" id="username" name="username" required />
+
+
+      <label for="password">รหัสที่พี่ฟ้าย</label>
+      <input type="password" id="password" name="password" required />
+      
+      <button type="submit">Login</button>
+      
+      <!-- ข้อความแจ้งเตือนจะปรากฏที่นี่ -->
+      <p id="error-message"></p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

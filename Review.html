@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="image-removebg-preview.png" />
+    <title>CAFEPUNTO REVIEW</title>
+    <link rel="stylesheet" href="Review.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+        <a href="index.html">CAFEPUNTO</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="about.html">เกี่ยวกับเรา</a></li>
+        <li><a href="#contact">ติดต่อเรา</a></li>
+    </ul>
+</nav>
+
+
+    <div class="container">
+        <h1>CAFEPUNTO REVIEW</h1>
+
+        <!-- Upload Image (Moved Above Review Text) -->
+        <label for="images" class="image-upload">
+            <input type="file" id="images" multiple accept="image/*">
+            <span class="upload-icon">+</span>
+        </label>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <div id="usernameError" class="error-message"></div>
+
+        <!-- Review Form -->
+        <form id="reviewForm">
+            <label for="reviewText">Write a review:</label>
+            <textarea id="reviewText" required></textarea>
+
+            <label>Rating:</label>
+            <div class="star-rating">
+                <span data-value="1" class="star">★</span>
+                <span data-value="2" class="star">★</span>
+                <span data-value="3" class="star">★</span>
+                <span data-value="4" class="star">★</span>
+                <span data-value="5" class="star">★</span>
+            </div>
+            <input type="hidden" id="ratingValue" value="0">
+
+            <button type="submit">Submit Review</button>
+        </form>
+
+        <!-- Reviews Display -->
+        <div id="reviewsContainer"></div>
+    </div>
+    
+    <script src="Review.js"></script>
+</body>
+</html>

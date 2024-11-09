@@ -1,0 +1,155 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    font-family: "Itim", cursive;
+}
+
+/* สไตล์ Nav Bar */
+.navbar {
+    position: relative;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* โลโก้ */
+  .logo a {
+    position: relative;
+    left: 50px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* รายการลิงก์ */
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  /* ลิงก์แต่ละอัน */
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+  }
+  
+  /* เปลี่ยนสีเมื่อเมาส์ชี้ */
+  .nav-links a:hover {
+    color: #ff9800;
+  }
+  
+  /* เพิ่ม padding ให้เนื้อหาหลักไม่ทับกับ Nav Bar */
+  body {
+    padding-top: 60px;
+  }
+
+  img {
+    display: block;
+    margin: 200px auto 0 auto; /* ตั้งค่า margin ด้านบนให้มีระยะห่าง */
+    max-width: 300px;
+    max-height: 150px;
+    transition: transform 0.3s ease;
+  }
+
+  .text-about {
+    width: 90%; /* ขยายความกว้างของ container */
+    max-width: 800px; /* จำกัดความกว้างสูงสุด */
+    margin: 100px auto; /* ตั้งค่าให้จัดกึ่งกลางและเว้นระยะจากขอบ */
+    color: white; /* สีข้อความ */
+    font-size: 20px; /* ขนาดข้อความ */
+    line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
+  }
+  
+  .text-about h1 {
+    text-align: center; /* จัดหัวข้อให้อยู่กลาง */
+    margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างหัวข้อกับเนื้อหา */
+    color: white; /* สีหัวข้อ */
+    font-size: 32px;
+  }
+  
+  .text-about p {
+    column-count: 1; /* แสดงเป็นคอลัมน์เดียว */
+    column-gap: 20px; /* เว้นระยะห่างระหว่างคอลัมน์ (หากมีหลายคอลัมน์ในอนาคต) */
+    text-align: justify; /* จัดข้อความให้เต็มบรรทัด */
+    padding: 0 15px; /* เพิ่ม padding ซ้ายขวาเล็กน้อย */
+    transition: color 0.3s ease; /* เปลี่ยนสีอย่างนุ่มนวลเมื่อ hover */
+    text-indent: 30px; /* ย่อบรรทัดแรกเข้ามา */
+    line-height: 1.8; /* เพิ่มระยะห่างระหว่างบรรทัด */
+    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่างของย่อหน้า */
+  }
+
+  
+  .text-about p:hover {
+    color: #ffd700; /* เปลี่ยนสีข้อความเมื่อ hover */
+  }
+  
+
+  /* สไตล์สำหรับเมนูแฮมเบอร์เกอร์ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px;
+  transition: transform 0.3s ease;
+}
+
+  /* แสดงเมนูแบบดรอปดาวน์เมื่อเป็นมือถือ */
+@media (max-width: 768px) {
+  .hamburger {
+      display: flex;
+      position: relative;
+      right: 40px;
+  }
+  .nav-links {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      transform: translateX(100%);
+  }
+
+  .nav-links li {
+      margin: 20px 0;
+  }
+
+  .nav-links.show {
+      transform: translateX(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .text-about p {
+    column-count: 1; /* เปลี่ยนให้เป็นคอลัมน์เดียวเมื่อจอเล็ก */
+    padding: 0 10px; /* ลด padding ซ้ายขวา */
+    font-size: 16px; /* ลดขนาดฟอนต์สำหรับจอเล็ก */
+    text-indent: 20px; /* ลดการย่อบรรทัดแรกให้เข้ามาน้อยลง */
+    line-height: 1.6; /* ลดระยะห่างระหว่างบรรทัด */
+    margin-bottom: 15px; /* ลดระยะห่างด้านล่าง */
+  }
+}
+
+  
